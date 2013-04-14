@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Dim 14 Avril 2013 à 16:54
+-- Généré le : Dim 14 Avril 2013 à 17:18
 -- Version du serveur: 5.5.20
 -- Version de PHP: 5.3.10
 
@@ -63327,7 +63327,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `email`, `validmail`, `desinscrit`, `sponsor`, `subdate`, `moreChar`) VALUES
-(1, 'admin', '9ec69776ba7401ce26ed714b40f8577e', 'test@test.fr', 1, 0, 0, '2013-04-02', 0);
+(1, 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'test@test.fr', 1, 0, 0, '2013-04-02', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
