@@ -1,0 +1,5 @@
+
+
+DELETE FROM `royaume-arelidon`.`admin_dashboard` WHERE `admin_dashboard`.`ref` =18;
+
+DELETE FROM `royaume-arelidon`.`admin_dashboard` WHERE `admin_dashboard`.`ref` =19;

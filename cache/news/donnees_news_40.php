@@ -1,0 +1,5 @@
+<?php
+
+$cache = unserialize('a:8:{i:0;s:2:"40";s:2:"id";s:2:"40";i:1;s:10:"2010-06-19";s:4:"date";s:10:"2010-06-19";i:2;s:24:"Probl?mes sur le serveur";s:5:"title";s:24:"Probl?mes sur le serveur";i:3;s:330:"Il y a eu de graves bogues hier sur le serveur. A pr?sent vous pouvez rejouer normalement. Les monstres sont reapparus, r?cup?rer les drops marche ? nouveau. Le partage des xp en groupe sont momentan?ment suspendus, puisque ils provoquaient lags ou plantage. <br/> Pour nous excuser nous donnerons 400 PA ? tout le monde demain.  ";s:7:"content";s:330:"Il y a eu de graves bogues hier sur le serveur. A pr?sent vous pouvez rejouer normalement. Les monstres sont reapparus, r?cup?rer les drops marche ? nouveau. Le partage des xp en groupe sont momentan?ment suspendus, puisque ils provoquaient lags ou plantage. <br/> Pour nous excuser nous donnerons 400 PA ? tout le monde demain.  ";}');
+
+?>

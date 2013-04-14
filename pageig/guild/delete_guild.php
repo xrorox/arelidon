@@ -1,0 +1,1 @@
+<?php require_once('../../require.php');if(isset($_GET['guild_id'])){    $guild=new guild();	    $guild->destroyGuildAndAll($_GET['guild_id']);		}?>

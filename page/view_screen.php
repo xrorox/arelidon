@@ -1,0 +1,1 @@
+<?php if(!empty($_GET['screen'])): ?>    <div class="marginAuto heigth775">	<img src="pictures/screenshots/'.$_GET['screen'].'" class="width95P heigth95P" alt="Screenshot introuvable" />    </div><?php endif?>

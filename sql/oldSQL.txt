@@ -1,0 +1,364 @@
+// Ancienne requetes sql
+
+
+
+
+ALTER TABLE `char` ADD `res_fire` SMALLINT NOT NULL ,
+ADD `res_snow` SMALLINT NOT NULL ,
+ADD `res_wind` SMALLINT NOT NULL ,
+ADD `res_holy` SMALLINT NOT NULL ,
+ADD `res_earth` SMALLINT NOT NULL ,
+ADD `res_poison` SMALLINT NOT NULL ;
+
+ALTER TABLE `monster` ADD `res_fire` SMALLINT NOT NULL ,
+ADD `res_snow` SMALLINT NOT NULL ,
+ADD `res_earth` SMALLINT NOT NULL ,
+ADD `res_wind` SMALLINT NOT NULL ,
+ADD `res_holy` SMALLINT NOT NULL ,
+ADD `res_poison` SMALLINT NOT NULL ;
+
+CREATE TABLE `royaume-arelidon`.`skills_caracts` (
+`skill_id` SMALLINT NOT NULL ,
+`caract` VARCHAR( 3 ) NOT NULL ,
+`rate` FLOAT NOT NULL
+) ENGINE = InnoDB;
+
+ALTER TABLE `effect_on_char`
+  DROP `skill_level`,
+  DROP `duree_time`;
+
+ALTER TABLE `effect_on_char` ADD `number` TINYINT NOT NULL ;
+
+ALTER TABLE `monsteronmap` ADD `in_fight` INT NOT NULL ,
+ADD `fight_id` INT NOT NULL ;
+
+ALTER TABLE `char` ADD `fight_id` INT NOT NULL ;
+
+
+CREATE TABLE `shortcuts` (
+`char_id` INT NOT NULL ,
+`shortcutR` INT NULL ,
+`shortcutT` INT NULL ,
+UNIQUE (
+`char_id`
+)
+) ENGINE = MYISAM ;
+
+// table permettant de g�rer les diff�rentes options dans les guildes
+
+CREATE TABLE `guild_activity` (
+`timestamp` INT NOT NULL ,
+`guild_id` INT NOT NULL ,
+`char_id` INT NOT NULL ,
+`activity` INT NOT NULL ,
+`value` INT NOT NULL
+) ENGINE = MYISAM ;
+
+CREATE TABLE `guild_donation` (
+`guild_id` INT NOT NULL ,
+`char_id` INT NOT NULL ,
+`donation` INT NOT NULL
+) ENGINE = MYISAM ;
+
+
+
+// Contient les requetes SQL
+
+CREATE TABLE IF NOT EXISTS `shortcuts` (
+  `char_id` int(11) NOT NULL,
+  `shortcutR` int(11) DEFAULT NULL,
+  `shortcutT` int(11) DEFAULT NULL,
+  UNIQUE KEY `char_id` (`char_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `admin_dashboard` (name,category,rankmin) VALUES ('ajouter news','admins',5)
+
+SELECT DISTINCT idaccount FROM `char` WHERE time_connexion >= SYSDATE() - (86400*7)
+
+ALTER TABLE `log_connection` ADD `IP` VARCHAR( 255 ) NOT NULL ;
+
+ALTER TABLE `effect` ADD `silence` INT NOT NULL ;
+
+ALTER TABLE `char` ADD `skin` INT NOT NULL DEFAULT '0' AFTER `gender` ;
+
+CREATE TABLE IF NOT EXISTS `skin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `num` int(11) NOT NULL,
+  `gender` int(11) NOT NULL,
+  `class` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+
+--
+-- Contenu de la table `skin`
+--
+
+INSERT INTO `skin` (`id`, `name`, `num`, `gender`, `class`, `price`) VALUES
+(1, 'guerrier homme', 1, 1, 1, 0),
+(2, 'guerrier femme', 1, 2, 1, 0),
+(3, 'archer homme', 1, 1, 2, 0),
+(4, 'archer femme', 2, 2, 2, 0),
+(5, 'mage homme', 1, 1, 3, 0),
+(6, 'mage femme', 2, 2, 3, 0),
+(7, 'pretre homme', 1, 1, 4, 0),
+(8, 'pretre femme', 2, 2, 4, 0),
+(9, 'guerrier halloween', 3, 1, 1, 100),
+(10, 'guerriere halloween', 4, 2, 1, 100),
+(11, 'archer halloween', 3, 1, 2, 100),
+(12, 'arch�re halloween', 4, 2, 2, 100),
+(13, 'magicien halloween', 3, 1, 3, 100),
+(14, 'magicienne halloween', 4, 2, 3, 100),
+(15, 'pr�tre halloween', 3, 1, 4, 100),
+(16, 'pr�tresse halloween', 4, 2, 4, 100),
+(17, 'guerri�re d''edengar', 5, 2, 1, 100),
+(18, 'guerrier cheveu de feu', 6, 1, 1, 200),
+(19, 'professeur Ronald', 5, 1, 3, 100),
+(20, 'grand m�re caf�', 6, 2, 3, 50),
+(21, 'assassin cr�dit', 5, 1, 2, 200),
+(22, 'playboy girl', 6, 2, 2, 200),
+(23, 'la none', 5, 2, 4, 100),
+(24, 'l''infirmi�re', 6, 2, 4, 150),
+(25, 'pretre tib�tain', 7, 1, 4, 100);
+
+
+CREATE TABLE `skin_on_user` (
+`user_id` INT NOT NULL ,
+`skin_id` INT NOT NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE `log_cron_pa` (`date` DATE NOT NULL, `success` INT NOT NULL) ENGINE = InnoDB;
+
+ALTER TABLE `mapworld` ADD `guild_home` INT NOT NULL ;
+
+ALTER TABLE `objet` ADD `special_action` INT NOT NULL AFTER `poid` ;
+
+CREATE TABLE `hdv` (
+`char_id` SMALLINT NOT NULL ,
+`item` SMALLINT NOT NULL ,
+`number` SMALLINT NOT NULL ,
+`price` INT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `objet` ADD `magasin` TINYINT NOT NULL ;
+
+
+
+ALTER TABLE `users` DROP `desinscrit`;
+
+ALTER TABLE `char` ADD `abs` TINYINT NOT NULL ,
+ADD `ord` TINYINT NOT NULL ,
+ADD `face` TINYINT NOT NULL ,
+ADD `map` SMALLINT NOT NULL ;
+
+DROP TABLE `char_move`;
+
+
+
+ALTER TABLE `objet` DROP `magasin`;
+
+DROP TABLE `objetattribut`;
+DROP TABLE `objetench`;
+DROP TABLE `classeobjetrequire`;
+DROP TABLE `classeobjet`;
+DROP TABLE `inventaire`;
+DROP TABLE `bank`;
+DROP TABLE `bank_char`;
+DROP TABLE `bank_guild`;
+DROP TABLE `bank_guild_object`;
+DROP TABLE `shop`;
+DROP TABLE `shop_items`;
+DROP TABLE `shop_skill`;
+DROP TABLE `shop_skill_items`;
+DROP TABLE `hdv`;
+DROP TABLE `objetonmap`;
+
+CREATE TABLE `royaume-arelidon`.`char_inv` (
+`char_id` SMALLINT NOT NULL ,
+`item_id` SMALLINT NOT NULL ,
+`number` SMALLINT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `royaume-arelidon`.`char_inv` ADD UNIQUE `c` ( `char_id` , `item_id` ) ;
+
+CREATE TABLE `royaume-arelidon`.`char_equip` (
+`char_id` SMALLINT NOT NULL ,
+`place` TINYINT NOT NULL ,
+`item` SMALLINT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `royaume-arelidon`.`char_equip` ADD UNIQUE `c` ( `char_id` , `place` );
+ALTER TABLE `char_equip` CHANGE `item` `item_id` SMALLINT( 6 ) NOT NULL ;
+
+
+CREATE TABLE `royaume-arelidon`.`bank_gold` (
+`char_id` SMALLINT NOT NULL ,
+`gold` INT NOT NULL ,
+`guild` SMALLINT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `royaume-arelidon`.`bank_gold` ADD UNIQUE `c` ( `char_id` , `guild` ) ;
+
+CREATE TABLE `royaume-arelidon`.`bank_item` (
+`char_id` SMALLINT NOT NULL ,
+`item_id` SMALLINT NOT NULL ,
+`number` SMALLINT NOT NULL ,
+`guild` SMALLINT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `royaume-arelidon`.`bank_item` ADD UNIQUE `c` ( `char_id` , `item_id` , `guild` ) ;
+
+
+
+DROP TABLE `guild_donation`;
+
+DROP TABLE IF EXISTS `attacks`;
+CREATE TABLE IF NOT EXISTS `attacks` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `fight_id` bigint(20) NOT NULL,
+  `skill_name` VARCHAR(80) NOT NULL,
+  `launcher` VARCHAR(80) NOT NULL,
+  `tunr_number` int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+CREATE TABLE `royaume-arelidon`.`attackresults` (
+`attack_id` BIGINT NOT NULL ,
+`target_id` INT NOT NULL ,
+`damage` INT NOT NULL ,
+`special` INT NOT NULL ,
+`effect_id` INT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `attackresults` CHANGE `target_id` `target_name` VARCHAR( 80 ) NOT NULL ;
+ALTER TABLE `attacks` CHANGE `tunr_number` `turn_number` INT( 11 ) NOT NULL;
+
+UPDATE `char` SET PA = 6;
+ALTER TABLE `attackresults` ADD `element` INT NOT NULL AFTER `damage` ;
+
+CREATE TABLE `royaume-arelidon`.`fighters_item_win` (
+`fight_id` INT NOT NULL ,
+`fighter_id` INT NOT NULL ,
+`number` TINYINT NOT NULL ,
+`item_id` INT NOT NULL
+) ENGINE = MYISAM ;
+
+ALTER TABLE `royaume-arelidon`.`fighters_item_win` ADD UNIQUE (
+`fight_id` ,
+`fighter_id` ,
+`item_id`
+);
+
+CREATE TABLE `royaume-arelidon`.`typeitem` (
+`id` SMALLINT NOT NULL ,
+`name` VARCHAR( 50 ) NOT NULL ,
+PRIMARY KEY ( `id` )
+) ENGINE = MYISAM ;
+
+INSERT INTO `royaume-arelidon`.`typeitem` (
+`id` ,
+`name`
+)
+VALUES (
+'999', 'potions'
+), (
+'0', 'ressources'
+);
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('1', 'Ep�es'), ('3', 'Boucliers');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('4', 'Armures'), ('5', 'Casques');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('6', 'Ceintures'), ('7', 'Bottes');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('8', 'Outils'), ('9', 'Arcs');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('10', 'Batons'), ('11', 'Anneaux');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('12', 'Gants'), ('13', 'Colliers');
+
+INSERT INTO `royaume-arelidon`.`typeitem` (`id`, `name`) VALUES ('15', 'Haches');
+
+ALTER TABLE `typeitem` ADD `body_part_id` TINYINT NOT NULL 
+
+DROP TABLE `shortcuts
+
+DROP TABLE `bank`
+
+DROP TABLE `bank_char`
+
+DROP TABLE `bank_guild`
+
+DROP TABLE `bank_guild_object`
+
+DROP TABLE `inventaire`
+
+DROP TABLE `inventaire2`
+
+DROP TABLE `objetattribut`
+
+DROP TABLE `objetench`
+
+ALTER TABLE `quetes_etapes`
+  DROP `nb_need`,
+  DROP `id_need`,
+  DROP `skill_win`;
+
+ALTER TABLE `quetes_etapes_objectives` ADD `type` TINYINT NOT NULL 
+
+CREATE TABLE `royaume-arelidon`.`quetes_recompenses` (
+`id` INT NOT NULL ,
+`step_id` SMALLINT NOT NULL ,
+`id_recompense` SMALLINT NOT NULL ,
+`number_recompense` TINYINT NOT NULL ,
+`type` TINYINT NOT NULL
+) ENGINE = InnoDB;
+
+ALTER TABLE `quetes_recompenses` ADD `class_id` TINYINT NOT NULL 
+
+CREATE TABLE `royaume-arelidon`.`quete_prerequis` (
+`id` INT NOT NULL ,
+`step_id` SMALLINT NOT NULL ,
+`id_need` SMALLINT NOT NULL ,
+`nb_need` SMALLINT NOT NULL ,
+`type` TINYINT NOT NULL
+) ENGINE = InnoDB;
+
+ALTER TABLE `quete_prerequis` ADD PRIMARY KEY(`id`);
+
+ALTER TABLE `quete_prerequis` CHANGE `id` `id` INT( 11 ) NOT NULL AUTO_INCREMENT ;
+
+RENAME TABLE `royaume-arelidon`.`quete_prerequis` TO `royaume-arelidon`.`quetes_prerequis` ;
+
+ALTER TABLE `quetes_recompenses` ADD PRIMARY KEY(`id`);
+
+ALTER TABLE `quetes_recompenses` CHANGE `id` `id` INT( 11 ) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `quetes_etapes`
+  DROP `lvl_req`,
+  DROP `quest_req`,
+  DROP `objet_req`,
+  DROP `type`,
+  DROP `gold_win`,
+  DROP `exp_win`,
+  DROP `nbobjet_win`,
+  DROP `objet_win`;
+
+ALTER TABLE `char` ADD `fatigue` SMALLINT NOT NULL ;
+
+DROP TABLE `group_char`;
+
+ALTER TABLE `char` ADD `group_id` INT NOT NULL ;
+
+ALTER TABLE `char` ADD `in_fight` BOOLEAN NOT NULL;
+
+ALTER TABLE `skill` ADD `effect_needed` INT NOT NULL;
+
+CREATE TABLE `royaume-arelidon`.`classes_skills` (
+`classe_id` TINYINT NOT NULL ,
+`skill_id` SMALLINT NOT NULL
+) ENGINE = InnoDB;
+
+ALTER TABLE `skill` DROP `classe_req`;

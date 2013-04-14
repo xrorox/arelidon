@@ -1,0 +1,13 @@
+ 
+ 
+ bugs :
+ 
+ -> problèmes avec le timer de la mort
+ -> problèmes combats pas bon dégâts distribués.
+ -> dégâts redistribués d'un coup.
+ 
+ Mise à jours :
+ 
+ -> lorsque l'on passe sur un objet , afficher dans le menu la possibilité de le ramasser
+ -> coffre de guilde.
+ 

@@ -1,0 +1,1 @@
+<?php  require_once('../../require.php');  //TODO enlever donation de là ou réflcechir comment l'adapter avec l'écran de la banque de guilde.  $guild = new guild($_GET['guild_id']);  $guild->donation($char,$_POST['donation']);?>

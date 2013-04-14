@@ -1,0 +1,14 @@
+- vmware
+- daemon tool
+- ccleaner
+- codeblock
+- easy banner
+- filezilla
+- office
+- spyware doctor
+- virtuawin ?s 
+- warcraft 3
+- xlite
+- windows lite
+- torchlight ?
+- eclipse + wamp

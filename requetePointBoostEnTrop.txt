@@ -1,0 +1,4 @@
+ SELECT *
+FROM `char`
+WHERE 
+(level-1) *5 > ( str -2 + con -2 + dex -2 + `int` -2 + sag -2 + res -2 + boostpoint)

@@ -1,0 +1,1 @@
+<?php require_once($server.'class/admin.class.php'); ?> <div class="marginTop25 marginLeft25"> <?php if (admin::isInMaintenance()){ 	printAlert('Vous avez &eacute;t&eacute; d&eacute;connect&eacute; car le serveur est en maintenance',false,"white");	 } else{ 	printAlert('Vous venez d\'�tre d&eacute;connect&eacute; du jeu',false,"white"); }?></div>

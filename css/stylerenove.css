@@ -1,0 +1,576 @@
+/*   formulaire inscription */
+
+.spancheck
+{
+    float:right;
+    margin-right:75px;
+    display:none;
+}
+
+
+
+/* générique*/
+
+
+/* police */
+
+.font11
+{
+    font-size:11px;
+}
+
+.font15
+{
+    font-size:15px;
+}
+
+.font18
+{
+    font-size:18px;
+}
+
+.font26
+{
+    font-size:26px;
+}
+
+.font32
+{
+    font-size:32px;
+}
+
+.fontW700
+{
+    font-weight:700;
+}
+
+.fontWhite
+{
+    color:white;
+}
+
+.fontBlack
+{
+    color:black;
+}
+
+.center
+{
+    text-align:center;
+}
+
+.grey
+{
+    color:grey;
+}
+
+
+/* float */
+.left
+{
+    float:left;
+}
+
+.right
+{
+    float:right;
+}
+
+
+/*margin */
+
+.marginLeft0
+{
+    margin-left: 0px;
+}
+
+.marginLeft5
+{
+    margin-left: 5px;
+}
+
+.marginLeft6
+{
+    margin-left: 6px;
+}
+
+.marginLeft12
+{
+    margin-left: 12px;
+}
+.marginLeft20
+{
+    margin-left:20px;
+}
+
+.marginLeft25
+{
+    margin-left:25px;
+}
+
+.marginLeft30
+{
+    margin-left:30px;
+}
+
+.marginLeft45
+{
+    margin-left:45px;
+}
+
+.marginLeft110
+{
+    margin-left:110px;
+}
+
+.marginLeft140
+{
+    margin-left:140px;
+}
+
+.marginLeft10P
+{
+    margin-left:10%;
+}
+
+.marginLeft20P
+{
+    margin-left:20%;
+}
+
+.marginLeft70P
+{
+    margin-left:70%;
+}
+
+
+.marginTop-22
+{
+    margin-top:-22px;
+}
+
+.marginTop-10
+{
+    margin-top:-10px;
+}
+
+.marginTop-8
+{
+    margin-top:-8px;
+}
+
+
+.marginTop0
+{
+    margin-top:0px;
+}
+
+.marginTop5
+{
+    margin-top:5px;
+}
+
+.marginTop10
+{
+    margin-top:10px;
+}
+
+.marginTop15
+{
+    margin-top:15px;
+}
+
+.marginTop20
+{
+    margin-top:20px;
+}
+
+.marginTop25
+{
+    margin-top: 25px;
+}
+
+.marginTop30
+{
+    margin-top:20px;
+}
+
+.marginTop40
+{
+   margin-top:40px; 
+}
+
+.marginTop50
+{
+    margin-top: 50px;
+}
+
+.marginTop80
+{
+    margin-top: 80px;
+}
+
+.marginTop100
+{
+    margin-top:100px;
+}
+
+.marginAuto
+{
+    margin: auto;
+}
+
+.margin15
+{
+    margin: 15px;;
+}
+
+
+/*heigth*/
+
+
+.heigth10
+{
+    height: 10px;
+}
+
+.heigth15
+{
+    height: 15px;
+}
+
+.heigth16
+{
+    height: 16px;
+}
+
+.heigth20
+{
+    height: 20px;
+}
+
+.heigth22
+{
+    height: 22px;
+}
+
+.heigth24
+{
+    height: 24px;
+}
+
+.heigth25
+{
+    height: 25px;
+}
+
+.heigth32
+{
+    height:32px;
+}
+
+
+.heigth40
+{
+    height:40px;
+}
+
+.heigth45
+{
+    height:45px;
+}
+
+.heigth48
+{
+    height:48px;
+}
+
+.heigth85
+{
+    height:85px;
+}
+
+.heigth130
+{
+    height:130px;
+}
+
+.heigth140
+{
+    height:140px;
+}
+
+.heigth250
+{
+    height:140px;
+}
+
+.heigth300
+{
+    height:300px;
+}
+
+.heigth775
+{
+    height:775px;
+}
+
+.heigth60P
+{
+    height:60%;
+}
+
+.heigth95P
+{
+    height:95%;
+}
+
+.heigth100P
+{
+    height:100%;
+}
+
+/* Padding */
+
+
+paddingTop2
+{
+    padding-top: 2px;
+}
+.paddingTop5
+{
+    padding-top:5px; 
+}
+
+.paddingTop10
+{
+    padding-top:10px;  
+}
+
+.paddingTop20
+{
+    padding-top:20px;  
+}
+
+.paddingTop70
+{
+    padding-top:70px;  
+}
+
+.paddingLeft15
+{
+    padding-left:15px;
+}
+
+.paddingLeft20
+{
+    padding-left:20px;
+}
+
+.paddingLeft30
+{
+    padding-left:30px;
+}
+
+.paddingLeft55
+{
+    padding-left:55px;
+}
+
+
+paddingRight2
+{
+    padding-right: 2px;
+}
+.paddingRight20
+{
+    padding-right:20px;
+}
+
+paddingBottom5
+{
+    padding-bottom: 5px;
+}
+
+
+/*width */
+
+
+.width16
+{
+    width: 16px;
+}
+
+.width18
+{
+    width: 18px;
+}
+
+.width32
+{
+    width: 32px;
+}
+
+.width38
+{
+    width: 38px;
+}
+
+.width40
+{
+    width: 40px;
+}
+
+.width120
+{
+    width: 120px;
+}
+
+.width150
+{
+    width: 150px;
+}
+
+.width170
+{
+    width: 170px;
+}
+
+.width180
+{
+    width: 180px;
+}
+
+.width230
+{
+    width: 230px;
+}
+
+.width10P
+{
+    width: 10%;
+}
+
+.width40P
+{
+    width: 40%;
+}
+
+.width50P
+{
+    width: 50%;
+}
+
+.width60P
+{
+    width: 60%;
+}
+
+.width70P
+{
+    width: 70%;
+}
+
+.width80P
+{
+    width: 80%;
+}
+
+.width90P
+{
+    width: 90%;
+}
+
+.width95P
+{
+    width: 95%;
+}
+
+.width100P
+{
+    width: 100%;
+}
+
+/* autres */
+
+.nodecoration
+{
+    text-decoration:none;
+}
+
+.underline
+{
+    text-decoration:underline;
+}
+
+/* borders */
+
+.border0
+{
+    border:0px;
+}
+.border0black
+{
+    border:solid 0px black;
+}
+
+.border1white
+{
+    border:solid 1px white;
+}
+
+.borderbot2white
+{
+    border-bottom:solid 2px white;
+}
+
+.borderright2white
+{
+    border-right:solid 2px white;
+}
+
+
+
+/*** visibilite **/
+.visibility
+{
+    visibility:visible;
+}
+
+.nodisplay
+{
+    display:none;
+}
+
+.block
+{
+    display:block;
+}
+
+
+
+/* alignement */
+.alignTop
+{
+    vertical-align: top;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+/*background color*/
+
+.black
+{
+    background-color: black;
+}
+
+
+/* zindex*/
+
+.zindex1
+{
+    z-index:1;
+}

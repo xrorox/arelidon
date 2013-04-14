@@ -1,0 +1,42 @@
+Bonjour,
+
+Je m'appelle Johann, je travaille actuellement avec deux autres développeurs. Nous avons déjà réalisé un premier jeu en ligne (sur navigateur) : Royaume Arélidon). Nous réfléchissons aussi actuellement pour créer d'autres jeux en ligne / application Android/Iphone.
+
+<titre1>Mon projet</titre1>
+
+Royaume d'Arélidon (qui changera surement de noms) est un jeu de rôle en ligne. Il contient les classiques du jeu de rôle (quêtes, boss, guilde, artisanat, etc ...) et aussi ses petits plus (combat à plusieurs, système de chat en direct, etc ...).
+
+quelques screenshots : 
+
+
+<image>http://img835.imageshack.us/img835/9725/90592157.png</image>
+<image>http://img40.imageshack.us/img40/3318/88136092.png</image>
+<image>http://img683.imageshack.us/img683/7817/88458025.png</image>
+<image>http://img191.imageshack.us/img191/6752/79591571.png</image>
+
+
+Voilà graphiquement il y a du boulot :)
+
+<titre1>Ma demande</titre1>
+
+Pour réaliser ce projet, je suis à la recherche de :
+
+<couleur nom="orange"><gras>[Graphiste]</gras></couleur>
+<taille valeur="petit"><gras><italique><couleur nom="gris">
+
+Le but de cette demande, est de recruter un designer pour rejoindre notre équipe (en gros nous sommes 3 dév et 3 à 4 rôliste/mappeur sur le jeu.
+Ici le travail consistera à faire une refonte graphique du site (page d'accueil / interface IG, etc ...) afin de le rendre plus attractif.
+
+
+</couleur></italique></gras></taille>
+
+
+<titre1>Informations supplémentaires</titre1>
+
+Rémunération : actuellement rien :) nous rentabilisons le serveur, et le reste sert pour la pub. Nous tentons de créer un jeu / des jeux solides afin de pouvoir éventuellement gagner de l'argent voir créer une entreprise plus tard.
+
+Il sera peut être envisageable si la personne souhaite uniquement refaire le site sans continuer avec nous une petite rémunération (nous sommes assez juste niveau budget :)
+
+Contactez moi : blaster59@hotmail.fr ou sur gmail : johann.verbroucht@gmail.com
+
+Bonne journée à tous
