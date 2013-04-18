@@ -1,0 +1,18 @@
+Ceci est un MMO - RPG nommé Arelidon. Originellement développé quand nous étions en deuxième année d'informatique.
+
+Bien que le projet ait été pendant pratiquement un an en production, il est actuellement incomplet. En effet, nous avions entrepris
+une réécriture majeure. Cependant, le projet nécessitait trop de temps par rapport à sa rentabilité.
+
+Le site est globalement fonctionnel, le système de combat est incomplet. 
+Une liste des fonctionnalités non exhaustives :   
+	- Système de métier
+	- Gestion des quêtes.
+	- Module Admin (permettant de générer cartes, quêtes, monstres, objets).
+	- Système de skins.
+	- Guilde.
+	- Gestion de groupes.
+	- Banque d'or et d'objet, indivuduelle et de guilde.
+	- Marchands.
+	- Système de ventes entre joueurs.
+	- PvP
+	- PvM
