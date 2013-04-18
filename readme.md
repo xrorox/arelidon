@@ -1,11 +1,11 @@
-Ceci est un MMO - RPG nommé Arelidon. Originellement développé quand nous étions en deuxième année d'informatique.
+<p>Ceci est un MMO - RPG nommé Arelidon. Originellement développé quand nous étions en deuxième année d'informatique.</p>
 
-Bien que le projet ait été pendant pratiquement un an en production, il est actuellement incomplet. En effet, nous avions entrepris
-une réécriture majeure. Cependant, le projet nécessitait trop de temps par rapport à sa rentabilité.
+<p>Bien que le projet ait été pendant pratiquement un an en production, il est actuellement incomplet. En effet, nous avions entrepris
+une réécriture majeure. Cependant, le projet nécessitait trop de temps par rapport à sa rentabilité.</p>
 
-Le site est globalement fonctionnel, le système de combat est incomplet. 
-Une liste des fonctionnalités non exhaustives :   
-	<ul>- Système de métier </li>
+<p>Le site est globalement fonctionnel, le système de combat est incomplet. 
+Une liste des fonctionnalités non exhaustives :   </p>
+	<ul><li>- Système de métier </li>
 	<li>- Gestion des quêtes.</li>
 	<li>- Module Admin (permettant de générer cartes, quêtes, monstres, objets).</li>
 	<li>- Système de skins.</li>
