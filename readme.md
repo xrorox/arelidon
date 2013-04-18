@@ -5,16 +5,17 @@ une réécriture majeure. Cependant, le projet nécessitait trop de temps par rappo
 
 Le site est globalement fonctionnel, le système de combat est incomplet. 
 Une liste des fonctionnalités non exhaustives :   
-	- Système de métier \n
-	- Gestion des quêtes.
-	- Module Admin (permettant de générer cartes, quêtes, monstres, objets).
-	- Système de skins.
-	- Guilde.
-	- Gestion de groupes.
-	- Banque d'or et d'objet, indivuduelle et de guilde.
-	- Marchands.
-	- Système de ventes entre joueurs.
-	- PvP
-	- PvM
-	- Tchat
-	- Allopass
+	<ul>- Système de métier </li>
+	<li>- Gestion des quêtes.</li>
+	<li>- Module Admin (permettant de générer cartes, quêtes, monstres, objets).</li>
+	<li>- Système de skins.</li>
+	<li>- Guilde.</li>
+	<li>- Gestion de groupes.</li>
+	<li>- Banque d'or et d'objet, indivuduelle et de guilde.</li>
+	<li>- Marchands.</li>
+	<li>- Système de ventes entre joueurs.</li>
+	<li>- PvP</li>
+	<li>- PvM</li>
+	<li>- Tchat</li>
+	<li>- Allopass</li>
+	</ul>
