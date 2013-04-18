@@ -5,7 +5,7 @@ une réécriture majeure. Cependant, le projet nécessitait trop de temps par rappo
 
 Le site est globalement fonctionnel, le système de combat est incomplet. 
 Une liste des fonctionnalités non exhaustives :   
-	- Système de métier
+	- Système de métier \n
 	- Gestion des quêtes.
 	- Module Admin (permettant de générer cartes, quêtes, monstres, objets).
 	- Système de skins.
@@ -16,3 +16,5 @@ Une liste des fonctionnalités non exhaustives :
 	- Système de ventes entre joueurs.
 	- PvP
 	- PvM
+	- Tchat
+	- Allopass
