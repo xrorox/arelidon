@@ -1,9 +1,5 @@
-Ceci est un MMO - RPG nommé Arelidon. Originellement développé quand nous étions en deuxième année d'informatique.
+Ceci est un MMO - RPG nommé Arelidon développé en php/javascript.
 
-Bien que le projet ait été pendant pratiquement un an en production, il est actuellement incomplet. En effet, nous avions entrepris
-une réécriture majeure. Cependant, le projet nécessitait trop de temps par rapport à sa rentabilité.
-
-Le site est globalement fonctionnel, le système de combat est incomplet. 
 Une liste des fonctionnalités non exhaustives :
 	- Système de métier 
 	- Gestion des quêtes.
@@ -18,3 +14,7 @@ Une liste des fonctionnalités non exhaustives :
 	- PvM
 	- Tchat
 	- Allopass
+
+Le jeu fut en production pendant un an. Le système de combat est actuellement incomplet car le projet a été stoppé au cours d'une réécriture majeure et d'une modifications importantes du système de combat. Il s'agissait notamment d'inclure des dégâts et résistances élementaires.
+
+Le code source est sous licence MIT.
