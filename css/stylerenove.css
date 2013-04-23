@@ -7,9 +7,14 @@
     display:none;
 }
 
+.nodisplay
+{
+    display:none;
+}
 
 
-/* générique*/
+
+/* gï¿½nï¿½rique*/
 
 
 /* police */
@@ -537,10 +542,7 @@ paddingBottom5
     visibility:visible;
 }
 
-.nodisplay
-{
-    display:none;
-}
+
 
 .block
 {

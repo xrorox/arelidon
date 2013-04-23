@@ -48,5 +48,5 @@ switch($part)
 		}
                 ?>
 	</div><br />
-	<img src="'.$picture_url.'" alt="Royaume d arelidon un monde de magie" title="Royaume d arelidon un monde de magie" class="img-body-preview" />
+	<img src="<?php echo $picture_url?>" alt="Royaume d arelidon un monde de magie" title="Royaume d arelidon un monde de magie" class="img-body-preview" />
 </div>

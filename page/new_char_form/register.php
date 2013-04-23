@@ -53,7 +53,7 @@
                     </div>
                     <br />
                     <input type="button" 
-                        value="Créer le personnage" 
+                        value="CrÃ©er le personnage" 
                         onclick="checkCreateCharForm();" 
                         class="marginTop5 font11"/>
                     <br />

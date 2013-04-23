@@ -48,7 +48,7 @@
 
 <script type="text/javascript" src="js/move-2.4.2.js"></script>
 <script type="text/javascript" src="js/move/key-event-azerty-1.5.js"></script>
-
+<script type="text/javascript" src="js/registration-1.0.js"></script>
 
 
 

@@ -58,7 +58,7 @@ if(!empty($_GET['validation']))
 	<?php if(empty($_GET['register'])) {?>
 		Choix du personnage 
 	<?php } else { ?>
-		Cr�ation d'un personnage 
+		Création d'un personnage 
 	<?php } ?>
 </div>
 <hr />
@@ -78,9 +78,9 @@ if(!empty($_GET['validation']))
 			?>
 			<table id="container_char_show">
 				<tr>
-<!--					<td style="height:190px;">-->
-<!--						<img onclick="switchCharLeft()" src="pictures/arrow_left.png" style="border: 0px" /> -->
-<!--					</td>-->
+<!--					<td style="height:190px;">
+						<img onclick="switchCharLeft()" src="pictures/arrow_left.png" style="border: 0px" /> 
+					</td>-->
 					<td>
 						<input id="max_char" type="hidden" value="<?php echo count($charList); ?>"/>
 						<?php 

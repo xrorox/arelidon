@@ -1,0 +1,25 @@
+/* 
+    Document   : newdesign
+    Created on : 23 avr. 2013, 21:01:26
+    Author     : romain
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+    Création de personnage.
+*/
+
+.sex_table
+{
+    width: 80px;
+    margin:auto;
+    text-align: center;
+}
+
+.sex_title
+{
+    text-decoration:underline;
+    height: 25px;
+    padding-bottom: 5px;
+}
