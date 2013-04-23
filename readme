@@ -17,4 +17,7 @@ Une liste des fonctionnalités non exhaustives :
 
 Le jeu fut en production pendant un an. Le système de combat est actuellement incomplet car le projet a été stoppé au cours d'une réécriture majeure et d'une modifications importantes du système de combat. Il s'agissait notamment d'inclure des dégâts et résistances élementaires.
 
+Toutes les cartes, monstres et objets du jeu sont inclus. Le répertoire du projet doit être nommé Arelidon.
+Un seul utilisateur est présent en base : login : admin, pwd : admin.
+
 Le code source est sous licence MIT.
