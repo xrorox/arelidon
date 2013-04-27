@@ -1151,4 +1151,18 @@ function getNumberOfRegister()
 	
 		return $distance;
 	}
+        
+function getPict($valid,$title,$num)
+{
+	if($valid)
+	{
+		$txt = '<img src="pictures/utils/mini-valid.gif" alt="Valide" title="'.$title.'" />';	
+		$txt .= '<span id="form_valid_'.$num.'" style="display:none;">1</span>';
+		return $txt;
+	}else{
+		$txt = '<img src="pictures/utils/mini-no.gif" alt="Pas valide" title="'.$title.'" />';	
+		$txt .= '<span id="form_valid_'.$num.'" style="display:none;">0</span>';
+		return $txt;
+	}
+}
 ?>

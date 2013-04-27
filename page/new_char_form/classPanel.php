@@ -1,7 +1,7 @@
 
 <?php require_once('class/classe.class.php');?>
 
-<div id="selected-class" style="display:none;">0</div>
+<input type="hidden" id="selected-class" style="display:none;" value="0">
 
 <table style="width:80%;margin:auto;">
 	<tr>

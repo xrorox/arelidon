@@ -1,9 +1,5 @@
 <?php require_once("widgets/IrelionContainer.class.php"); ?>
 
-<div class="nodisplay">
-	<div id="post_container_response" class="nodisplay"></div>
-</div>
-
 <table class="width90P marginAuto">
     <tr>
         <td class="alignTop width120">
@@ -42,14 +38,14 @@
                     <td> <div id="picture-container" class="center"></div> </td>
                 </tr>
                 <tr>
-                    <td class="center">
+                    <td class="center" style="display:inline-block;">
                     <input id="char-name" type="text" 
                         onclick="if(this.value == 'Nom du personnage'){ this.value = '';}" 
                         onblur="checkCharNameAvailable(this.value);" 
                         value="Nom du personnage" 
-                        class="center width180"/>
-                    <div class="right nodisplay">
-                        <div id="char-name-available" class="nodisplay right"></div>
+                        class="center width180" style="float:left;"/>
+                    <div id="char-name-available" style="float:left;">
+                   
                     </div>
                     <br />
                     <input type="button" 

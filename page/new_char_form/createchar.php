@@ -32,8 +32,8 @@
 		
 		
 	if($id_return != 0)
-		echo 'V';
+		echo 'true';
 	else{
-		echo 'X';
+		echo 'false';
 	}
 ?>

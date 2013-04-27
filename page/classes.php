@@ -39,7 +39,7 @@ else
 		
 		$text = '<div class="center"><b>' .
  	 			'<a href="index.php?page=classes&classe_desc=4" class="nodecoration">' .
- 	 			' Prêtre ' .
+ 	 			' Prï¿½tre ' .
  	 			'</a></b>' .
  	 			'</div>';
 		createBox160($text);
@@ -63,7 +63,7 @@ else
 <!--	// Haut du parchemin			-->
 		<div class="hautparchemin"></div>';
 
-<!--// Div qui contiendra les infos de l'étape / quête séléctionnée			-->
+<!--// Div qui contiendra les infos de l'ï¿½tape / quï¿½te sï¿½lï¿½ctionnï¿½e			-->
 			<div id="quete_container" class="quetecontenaire">
 				 <div class="heigth20"></div>
 				<div id="desc"  class="fontElfique etapequete">
@@ -72,26 +72,26 @@ else
 			 	 {
 			 	 	case 1 :
 			 	 		    echo '<div class="center"> Le Guerrier </div><br />';
-			 	 			echo "Tel le chevalier en quête perpétuel, le seigneur de guerre local, le champion du roi, le fantassin d’élite, le mercenaire endurci tous sont des guerriers. Ils peuvent être le défenseur de la veuve et de l’orphelin ou bien de simples mercenaires aux services de ceux qui peuvent s’offrir leurs services.<br /><br />" .
-			 	 					" Certains sont parmi les plus nobles héros du pays toujours près à risquer milles morts, tandis que d’autres ne faisant que peu de cas de la vie humaine tuent par intérêt ou par pur plaisirs.<br /><br />" .
-			 	 					" Rompu à la manipulation de quasiment toutes les armes et armures connues, ils ne sont pas connus pour être de grands amateurs sur les questions de la magie mais peuvent s’associer pleinement durant leurs missions avec des alliés profanes. Les missions dangereuses seront mieux appréciés car le danger inhérents au combat leurs donneront plus d’excitation. ";
+			 	 			echo "Tel le chevalier en quÃªte perpÃ©tuelle, le seigneur de guerre local, le champion du roi, le fantassin d'Ã©lite, le mercenaire endurci tous sont des guerriers. Ils peuvent Ãªtre le dÃ©fenseur de la veuve et de l'orphelin ou bien de simples mercenaires aux services de ceux qui peuvent s'offrir leurs services.<br /><br />" .
+			 	 					" Certains sont parmi les plus nobles hÃ©ros du pays toujours prÃªts Ã  risquer mille morts, tandis que d'autres ne faisant que peu de cas de la vie humaine tuent par intÃ©rÃªt ou par pur plaisir.<br /><br />" .
+			 	 					" Rompu Ã  la manipulation de quasiment toutes les armes et armures connues, ils ne sont pas connus pour Ãªtre de grands amateurs de magie mais peuvent s'associer pleinement durant leurs missions avec des alliÃ©s profanes. Les missions dangereuses seront mieux apprÃ©ciÃ©es car les dangers inhÃ©rents au combat leurs donneront plus d'excitation. ";
 			 	 	break;
 			 	 	case 2 :
 							echo '<div class="center"> L\'archer </div><br />';
-							echo "L’art de l’arc est considéré par certains comme un accomplissement spirituel et par d’autres comme un art philosophique. Pour certains c’est un véritable mode de vie et pour d’autres encore cela sera considéré comme une vrai religion. Naturellement beaucoup considèrerons que le fait de tuer avec un arc est une compétence importante dans un monde aussi dangereux.<br /><br />
-									La voie de l’arc est un art martial, c’est une question de précision et de discipline, tout est question de fusion entre soi même son arc et l’ennemi à abattre bien entendu. Quand on lui demande ce qu’est la vérité à un maître archer, il prend son arc, décoche une flèche et sans dire un mot, laisse sa maîtrise parler pour lui et ainsi vous faire constater sa vérité. 
+							echo "L'art de l'arc est considÃ©rÃ© par certains comme un accomplissement spirituel et par d'autres comme un art philosophique. Pour certains c'est un vÃ©ritable mode de vie et pour d'autres encore cela sera considÃ©rÃ© comme une vraie religion. Naturellement beaucoup considÃ©rerons que le fait de tuer avec un arc est une compÃ©tence importante dans un monde aussi dangereux.<br /><br />
+									La voie de l'arc est un art martial, c'est une question de prÃ©cision et de discipline, tout est question de fusion entre soi mÃªme son arc et l'ennemi Ã  abattre bien entendu. Quand on lui demande ce qu'est la vÃ©ritÃ© Ã  un maÃ®tre archer, il prend son arc, dÃ©coche une flÃªche et sans dire un mot, laisse sa maÃ®trise parler pour lui et ainsi vous faire constater sa vÃ©ritÃ©. 
 								  ";
 					break;
 			 	 	case 3 :
 					 	 	echo '<div class="center"> Le Mage </div><br />';
-					 	 	echo "Mage spécialisé dans la magie noire et offensive. C’est souvent un érudit ayant appris ses sortilèges dans de vieux livres écrits dans une langue ancestrale, ou ayant fait l’apprentissage auprès d’un autre sorcier.<br /><br />" .
-					 	 			" Portant en général une robe et une cape a capuche sombres, il maîtrise l’énergie des éléments et leur donne la forme qu’il souhaite grâce à des formules magiques ainsi qu’un bâton qui leur permet de canaliser leur énergie. Intelligent, il possède un grand savoir du monde.";
+					 	 	echo "Mage spÃ©cialisÃ© dans la magie noire et offensive. C'est souvent un Ã©rudit ayant appris ses sortilÃ¨ges dans de vieux livres Ã©crits dans une langue ancestrale, ou ayant fait l'apprentissage auprÃ¨s d'un autre sorcier.<br /><br />" .
+					 	 			" Portant en gÃ©nÃ©ral une robe et une cape Ã  capuche sombre, il maÃ®trise l'Ã©nergie des Ã©lÃ©ments et leur donne la forme qu'il souhaite grÃ ce Ã  des formules magiques ainsi qu'un baton qui leur permet de canaliser leur Ã©nergie. Intelligent, il possÃ¨de un grand savoir du monde.";
 			 	 	break;
 			 	 	case 4 :
-					 	 	echo '<div class="center"> Le Prêtre </div><br />';
-					 	 	echo "L’œuvre des dieux est en tout choses, aussi bien dans les armées de croyant que dans les temples les plus majestueux. Comme dans le cœur du plus humbles des fidèles.<br /><br /> ".
-								 "Les prêtres partent à l’aventure pour soutenir la cause de leur dieu, du moins est ce la raison la plus souvent indiqué. Les bons prêtres aiderons le commun des mortels dans leur vie en les soulageant, les plus maléfiques accroîtrons leurs pouvoirs personnels afin d’être craint.<br /><br />".
-								 "Les prêtres sont les maitres de la magie divine particulièrement pour les soins ou pour leur pendant maléfiques détruire leur ennemis. Les prêtres sont amener à manipuler un peu les armes mais jamais aussi bien qu’un guerrier.";
+					 	 	echo '<div class="center"> Le PrÃ¨tre </div><br />';
+					 	 	echo "L'oeuvre des dieux est en tout choses, aussi bien dans les armÃ©es de croyants que dans les temples les plus majestueux. Comme dans le coeur du plus humbles des fidÃ¨les.<br /><br /> ".
+								 "Les prÃ¨tres partent Ã  l'aventure pour soutenir la cause de leur dieu, du moins est ce la raison la plus souvent indiquÃ©s. Les bons prÃ¨tres aiderons le commun des mortels dans leur vie en les soulageant, les plus malÃ©fiques accroï¿½trons leurs pouvoirs personnels afin d'Ãªtre craint.<br /><br />".
+								 "Les prÃ¨tres sont les maitres de la magie divine particuliÃ¨rement pour les soins ou pour leur pendant malÃ©fiques dÃ©truire leur ennemis. Les prÃ¨tres sont amener Ã  manipuler un peu les armes mais jamais aussi bien qu'un guerrier.";
 			 	 	break;
 			 	 }  
                                  ?>

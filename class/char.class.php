@@ -93,24 +93,28 @@ class char {
 
     function __construct() {
 
-        $num = func_get_arg(0);
-
-        if (intval($num) > 0)
-            $number = true;
-        else
+        if(func_num_args() > 0)
+        {
+            $num = func_get_arg(0);
+            
             $number = false;
-
-        if (is_array($num))
-            $array = true;
-        else
             $array = false;
 
-        if ($number)
-            $this->loadChar(func_get_arg(0));
-        elseif ($array)
-            $this->loadCharByArray(func_get_arg(0));
-        else
-            $this->loadCharByName(func_get_arg(0));
+            if (intval($num) > 0)
+            {
+                $number = true;
+            }
+            elseif (is_array($num)) {
+                $array = true;
+            }
+
+            if ($number)
+                $this->loadChar(func_get_arg(0));
+            elseif ($array)
+                $this->loadCharByArray(func_get_arg(0));
+            else
+                $this->loadCharByName(func_get_arg(0));
+        }
     }
 
     function setId($id) {
@@ -1424,6 +1428,12 @@ class char {
         }
         $pourcent = round(($exp / $aexp) * 100);
         return $pourcent;
+    }
+    
+    public static function getCharList($user)
+    {
+        $sql = "SELECT * FROM `char` WHERE idaccount = '".$user->getId()."' ";
+        return loadSqlResultArrayList($sql);
     }
 
 }

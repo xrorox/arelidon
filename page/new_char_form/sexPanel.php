@@ -1,4 +1,4 @@
-<div id="selected-sex" style="display:none;">1</div>
+<input type="hidden" id="selected-sex" style="display:none;" value="1">
 
 <table class="sex_table">
     <tr>

@@ -64,7 +64,7 @@
 								<td class="char-element-list-label" class="paddingLeft30 height45"style="padding-left:30px !important;height:45px;">
 									<?php 
 									if($locked)
-										echo "Bloqué";
+										echo "BloquÃ©";
 									else
 										echo "Vide"; ?>
 								</td>
