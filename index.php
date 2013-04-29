@@ -25,7 +25,7 @@ include($server . 'deb.inc.php');
 
 <meta name="google-site-verification" content="TDRE4t3ZGQhG0TkjnnPH8uKoy80yrY9aQqwyKF-GXfY" />
 <title>Irelion</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/JavaScript">
 

@@ -5,8 +5,7 @@ function loadInDiv(url,id)
 	var xhr_object = null;
 	var position = id;
 	if(window.XMLHttpRequest) xhr_object = new XMLHttpRequest();
-	else
-	if (window.ActiveXObject) xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
+	else if (window.ActiveXObject) xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
 	
 	// On ouvre la requete vers la page d�sir�e
 	xhr_object.open("GET", url, true);

@@ -38,11 +38,11 @@ if (!empty($_GET['add'])):
             map : 
             <input type="text" name="map" size="3" /><br /><br />
             abs : 
-            echo '<input type="text" name="abs" size="3" /><br /><br />
+            <input type="text" name="abs" size="3" /><br /><br />
             ord : 
             <input type="text" name="ord" size="3" /><br /><br />	
             cach&eacute; : 
-            echo '<input type="checkbox" name="hide" value="1" /><br /><br />
+            <input type="checkbox" name="hide" value="1" /><br /><br />
             bloque : 
             <input type="checkbox" name="bloc" value="1" checked=checked /><br /><br />
             <div style="margin-left:60px">

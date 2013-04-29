@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Dim 14 Avril 2013 à 17:18
+-- Généré le : Lun 29 Avril 2013 à 14:32
 -- Version du serveur: 5.5.20
 -- Version de PHP: 5.3.10
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`iduser`, `admin`, `rank`) VALUES
-(1, 1, 1);
+(1, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -59,35 +59,35 @@ CREATE TABLE IF NOT EXISTS `admin_dashboard` (
 
 INSERT INTO `admin_dashboard` (`ref`, `name`, `category`, `rankmin`) VALUES
 (1, 'ajouter carte', 'cartes', 1),
-(2, 'g?rer cartes', 'cartes', 5),
+(2, 'gérer cartes', 'cartes', 5),
 (3, 'voir monde', 'cartes', 1),
-(4, 'g?rer images', 'monstres', 5),
-(5, 'g?rer monstres', 'monstres', 5),
+(4, 'gérer images', 'monstres', 5),
+(5, 'gérer monstres', 'monstres', 5),
 (6, 'ajouter monstres', 'monstres', 4),
-(7, 'g?rer drops', 'monstres', 5),
-(8, 'g?rer caract?ristiques', 'classes', 5),
-(9, 'g?rer sorts', 'classes', 5),
-(10, 'g?rer effets', 'classes', 5),
-(11, 'g?rer objets', 'objets', 5),
-(12, 'cr?er objet sp?cial', 'objets', 5),
-(13, 'g?rer coffres', 'objets', 3),
-(14, 'g?rer les r?coltes', 'm?tiers', 3),
-(15, 'g?rer recettes', 'm?tiers', 1),
-(16, 'g?rer PNJ', 'pnj', 5),
-(17, 'g?rer les qu?tes', 'pnj', 5),
+(7, 'gérer drops', 'monstres', 5),
+(8, 'gérer caractéristiques', 'classes', 5),
+(9, 'gérer sorts', 'classes', 5),
+(10, 'gérer effets', 'classes', 5),
+(11, 'gérer objets', 'objets', 5),
+(12, 'créer objet spécial', 'objets', 5),
+(13, 'gérer coffres', 'objets', 3),
+(14, 'gérer les récoltes', 'métiers', 3),
+(15, 'gérer recettes', 'métiers', 1),
+(16, 'gérer PNJ', 'pnj', 5),
+(17, 'gérer les quêtes', 'pnj', 5),
 (20, 'voir les bugs signal', 'rapports', 5),
 (21, 'voir infos joueurs', 'joueurs', 2),
 (22, 'bannir', 'joueurs', 5),
 (23, 'voir infos globales', 'joueurs', 3),
-(24, 'g?rer les images', 'objets', 4),
-(25, 'ajouter qu?te', 'pnj', 5),
+(24, 'gérer les images', 'objets', 4),
+(25, 'ajouter quête', 'pnj', 5),
 (33, 'ajouter objet', 'joueurs', 1),
-(27, 'g?rer les ressources', 'm?tiers', 3),
-(28, 'g?rer les magasins', 'pnj', 4),
-(29, 'g?rer les magasins sorts', 'pnj', 5),
+(27, 'gérer les ressources', 'métiers', 3),
+(28, 'gérer les magasins', 'pnj', 4),
+(29, 'gérer les magasins sorts', 'pnj', 5),
 (30, 'ajouter obstacle', 'cartes', 3),
-(31, 'g?rer attaques', 'monstres', 3),
-(32, 'Ajouter atelier', 'm?tiers', 3),
+(31, 'gérer attaques', 'monstres', 3),
+(32, 'Ajouter atelier', 'métiers', 3),
 (36, 'Gérer le site', 'admins', 5),
 (38, 'skins', 'joueurs', 5);
 
@@ -257,7 +257,18 @@ CREATE TABLE IF NOT EXISTS `char` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `id` (`id`,`time_connexion`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `char`
+--
+
+INSERT INTO `char` (`id`, `name`, `idaccount`, `vip`, `points`, `classe`, `gender`, `skin`, `guild_id`, `guild_rank`, `faction`, `honnor`, `kills`, `deaths`, `level`, `pa`, `pp`, `gold`, `boostpoint`, `skillpoint`, `exp`, `aexp`, `str`, `con`, `dex`, `int`, `sag`, `res`, `cha`, `astr`, `acon`, `adex`, `aint`, `asag`, `ares`, `acha`, `life`, `mana`, `time_connexion`, `time_update`, `time_die`, `abs`, `ord`, `face`, `map`) VALUES
+(2, 'xrorox', 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 1, 240, 50, 0, 0, 0, 0, 300, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 12, 7, 1367243784, 1367062810, 0, 11, 12, 1, 1),
+(3, 'xrorox2', 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 1, 240, 50, 0, 0, 0, 0, 300, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 12, 7, 1367243482, 1367063101, 0, 3, 7, 1, 1),
+(4, 'test', 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 1, 240, 50, 0, 0, 0, 0, 300, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 12, 7, 1367243482, 1367063655, 0, 3, 7, 1, 1),
+(5, 'test2', 1, 0, 0, 2, 1, 0, 0, 0, 1, 0, 0, 0, 1, 240, 50, 0, 0, 0, 0, 300, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 12, 7, 1367243482, 1367063683, 0, 3, 7, 1, 1),
+(6, 'test3', 0, 0, 0, 6, 2, 0, 0, 0, 2, 0, 0, 0, 1, 240, 50, 0, 0, 0, 0, 300, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 12, 7, 1367063721, 1367063721, 0, 20, 12, 1, 179);
 
 -- --------------------------------------------------------
 
@@ -297,6 +308,13 @@ CREATE TABLE IF NOT EXISTS `char_recup` (
   PRIMARY KEY (`char_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `char_recup`
+--
+
+INSERT INTO `char_recup` (`char_id`, `account_id`) VALUES
+(6, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -306,6 +324,7 @@ CREATE TABLE IF NOT EXISTS `char_recup` (
 CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL,
   `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `description` text,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -313,15 +332,15 @@ CREATE TABLE IF NOT EXISTS `classe` (
 -- Contenu de la table `classe`
 --
 
-INSERT INTO `classe` (`id`, `name`) VALUES
-(1, 'guerrier'),
-(2, 'archer'),
-(3, 'mage'),
-(4, 'pr&ecirc;tre'),
-(5, 'paladin'),
-(6, 'chaman'),
-(7, '&eacute;l&eacute;mentariste'),
-(8, 'n&eacute;cromancien');
+INSERT INTO `classe` (`id`, `name`, `description`) VALUES
+(1, 'guerrier', 'Tel le chevalier en quête perpétuelle, le seigneur de guerre local, le champion du roi, le fantassin d''élite, le mercenaire endurci tous sont des guerriers. Ils peuvent être le défenseur de la veuve et de l''orphelin ou bien de simples mercenaires aux services de ceux qui peuvent s''offrir leurs services.\r\nCertains sont parmi les plus nobles héros du pays toujours prêts à risquer mille morts, tandis que d''autres ne faisant que peu de cas de la vie humaine tuent par intérêt ou par pur plaisir.\r\nRompu à la manipulation de quasiment toutes les armes et armures connues, ils ne sont pas connus pour être de grands amateurs de magie mais peuvent s''associer pleinement durant leurs missions avec des alliés profanes. Les missions dangereuses seront mieux appréciées car les dangers inhérents au combat leurs donneront plus d''excitation. \r\n'),
+(2, 'archer', 'L''art de l''arc est considéré par certains comme un accomplissement spirituel et par d''autres comme un art philosophique. Pour certains c''est un véritable mode de vie et pour d''autres encore cela sera considéré comme une vraie religion. Naturellement beaucoup considérerons que le fait de tuer avec un arc est une compétence importante dans un monde aussi dangereux.\r\nLa voie de l''arc est un art martial, c''est une question de précision et de discipline, tout est question de fusion entre soi même son arc et l''ennemi à abattre bien entendu. Quand on lui demande ce qu''est la vérité à un maître archer, il prend son arc, décoche une flêche et sans dire un mot, laisse sa maîtrise parler pour lui et ainsi vous faire constater sa vérité. \r\n'),
+(3, 'mage', 'Mage spécialisé dans la magie noire et offensive. C''est souvent un érudit ayant appris ses sortilèges dans de vieux livres écrits dans une langue ancestrale, ou ayant fait l''apprentissage auprès d''un autre sorcier.\r\nPortant en général une robe et une cape à capuche sombre, il maîtrise l''énergie des éléments et leur donne la forme qu''il souhaite gràce à des formules magiques ainsi qu''un baton qui leur permet de canaliser leur énergie. Intelligent, il possède un grand savoir du monde.\r\n'),
+(4, 'pr&ecirc;tre', 'L''oeuvre des dieux est en tout choses, aussi bien dans les armées de croyants que dans les temples les plus majestueux. Comme dans le coeur du plus humbles des fidèles.\r\nLes prètres partent à l''aventure pour soutenir la cause de leur dieu, du moins est ce la raison la plus souvent indiqués. Les bons prètres aiderons le commun des mortels dans leur vie en les soulageant, les plus maléfiques accroîtrons leurs pouvoirs personnels afin d''être craint.\r\nLes prètres sont les maitres de la magie divine particulièrement pour les soins ou pour leur pendant maléfiques détruire leur ennemis. Les prètres sont amener à manipuler un peu les armes mais jamais aussi bien qu''un guerrier.\r\n'),
+(5, 'paladin', 'Paladin guerrier prêtre.'),
+(6, 'chaman', 'Chaman lance des buffs et tape fort'),
+(7, '&eacute;l&eacute;mentariste', 'Elementariste lance des supers sorts d''AoE'),
+(8, 'n&eacute;cromancien', 'Peut réssuciter les morts et lancer des malédictions');
 
 -- --------------------------------------------------------
 
@@ -1646,6 +1665,14 @@ CREATE TABLE IF NOT EXISTS `log_connection` (
   `IP` varchar(255) NOT NULL,
   UNIQUE KEY `id` (`id`,`date`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `log_connection`
+--
+
+INSERT INTO `log_connection` (`id`, `date`, `IP`) VALUES
+(2, '2013-04-27', '127.0.0.1'),
+(2, '2013-04-29', '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -62996,6 +63023,19 @@ CREATE TABLE IF NOT EXISTS `skillonchar` (
   KEY `char_id` (`char_id`,`skill_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `skillonchar`
+--
+
+INSERT INTO `skillonchar` (`skill_id`, `char_id`, `level`) VALUES
+(1, 1, 1),
+(1, 1, 1),
+(1, 2, 1),
+(1, 3, 1),
+(1, 4, 1),
+(1, 5, 1),
+(1, 6, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -63008,6 +63048,19 @@ CREATE TABLE IF NOT EXISTS `skill_shortcut` (
   `skill_id` int(11) NOT NULL,
   KEY `char_id` (`char_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `skill_shortcut`
+--
+
+INSERT INTO `skill_shortcut` (`num`, `char_id`, `skill_id`) VALUES
+(1, 1, 1),
+(1, 1, 1),
+(1, 2, 1),
+(1, 3, 1),
+(1, 4, 1),
+(1, 5, 1),
+(1, 6, 1);
 
 -- --------------------------------------------------------
 

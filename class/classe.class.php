@@ -4,6 +4,7 @@ class classe {
 
     private $id;
     private $name;
+    private $description;
 
     function __construct() {
         $num = func_num_args();
@@ -28,6 +29,7 @@ class classe {
         $result = loadSqlResultArray($sql);
 
         $this->name = $result['name'];
+        $this->description = $result['description'];
     }
 
     public static function getArrayClasseName() {
@@ -43,33 +45,9 @@ class classe {
         );
     }
 
-    public static function getDescription($classe) {
-        switch ($classe) {
-            case 1:
-                $desc = "Le guerrier bla bla bla trop fort corps � corps il roxx � fond. Il peut aussi d�coup� ta maman";
-                break;
-            case 2:
-                $desc = "Il tire des fl�ches � distance c'est une grosse tafiolle d'elfe faut le br�ler";
-                break;
-            case 3:
-                $desc = "Super boule de feu toussa toussa, cool il va pouvoir bruler l'elfe";
-                break;
-            case 4:
-                $desc = "Il lance des soins, c'est ce gros d�bile qui a soign� l'elfe la derni�re fois";
-                break;
-            case 5:
-                $desc = "Paladin tank et lance des soins il est trop cheat";
-                break;
-            case 6:
-                $desc = "Chaman lance des buffs et tape fort";
-                break;
-            case 7:
-                $desc = "Elementariste lance des supers sorts d'AoE";
-                break;
-            case 8:
-                $desc = "Peut r�suciter les morts et lance des mal�dictions";
-                break;
-        }
+    public function getDescription() {
+        
+        $desc = $this->description;
 
         return htmlentities($desc);
     }
@@ -78,8 +56,6 @@ class classe {
         if ($id == 0) {
             $echo = " Toutes";
         } else {
-            //		$sql="SELECT name FROM `classe` WHERE id=".$id;
-            //		$echo=loadSqlResult($sql);
             $array = Classe::getArrayClasseName();
             return $array[$id];
         }

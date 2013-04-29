@@ -47,7 +47,7 @@ if($_POST['do'] == 'updateTelep')
 switch($do)
 {
 	case 'update':
-		$mapUp = new map($_GET['map']);
+		$mapUp = new map($idmap);
 		foreach($_POST as $name=>$value)
 		{
 			$mapUp->update($name,$value);
@@ -58,19 +58,18 @@ switch($do)
 	break;
 	
 	case 'import':
-		$map = new map($_GET['map']);
+		$map = new map($idmap);
 		$map->importInformation($_POST['map_import']);
 		$needShowOptions = 1;
 	break;	
 	
 	case 'blockArea':
-		$map = new map($_GET['map']);
+		$map = new map($idmap);
 		$map->blocCases($_POST['abs'],$_POST['abs_max'],$_POST['ord'],$_POST['ord_max']);
 		$show_option = 1;
 	break;
 	
 	case 'updateTelep':
-		$idmap = $_GET['map'];
 		foreach($_POST as $name=>$value)
 		{
 			if($name != 'do')

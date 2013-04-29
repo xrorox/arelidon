@@ -1,4 +1,5 @@
 <?php 
+	require_once("../../require.php");
 	require_once("../../class/classe.class.php");
 
 	if($_GET['class'] >= 1)
@@ -45,11 +46,11 @@
 			</tr>
 		</table>	
 		
-		<table style="width: 120px;height:120px;margin:auto;margin-top:-8px;">
+		<table style="width: 240px;height:120px;margin:auto;margin-top:-8px;">
 			<tr>
-				<td style="vertical-align:top;width:120px;margin:auto;">
+				<td style="vertical-align:top;width:240px;margin:auto;">
 					<!-- Left menu, selection of class / sexe / faction -->
-					<table style="width: 120px;" cellpadding="0" cellspacing="0">
+					<table style="width: 240px;" cellpadding="0" cellspacing="0">
 						<tr>
 							<td class="top-left">
 							</td>
@@ -63,7 +64,8 @@
 							</td>
 							<td class="middle" style="vertical-align:top;padding-top:10px;">
 								<?php 
-									echo classe::getDescription($_GET['class']);
+                                                                        $class = new Classe($_GET['class']);
+									echo $class->getDescription();
 								?>
 							</td>
 							<td class="middle-right">
