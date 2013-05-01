@@ -1,11 +1,7 @@
 function changeMap()
 {
-	var num = document.getElementById('changemap').value;
-	var url = "gestion/page.php?category=2&map="+num;
-	//document.getElementById(ModuleGestionMapContainer).innerHTML = '';
+	var url = "gestion/page.php?category=2&map=" + $('#changemap').val();
 	HTTPTargetCall(url,'tdbodygame');
-	
-
 }
 
 function addTelep(idmap)
@@ -101,39 +97,43 @@ function refreshMapEdition(idmap,type)
 function changeMapWithTelep(url2,type)
 {
 	
-	document.getElementById('ModuleGestionMapContainer').innerHTML = '';
-	if(document.getElementById('monster_to_add'))
+	$('#ModuleGestionMapContainer').html('');
+        var id_mstr = 0;
+	if($('#monster_to_add').html() != '')
 	{
-		var id_mstr = document.getElementById('monster_to_add').innerHTML;
+            id_mstr = $('#monster_to_add').html();
 	}
+        
+        var url = ';'
 	
 	switch(type)
 	{
 		case 1 :
-			var url = 'gestion/page.php?category=2&'+url2+'&type=cases_bloquees';
+			url = 'gestion/page.php?category=2&'+url2+'&type=cases_bloquees';
 				HTTPTargetCall(url,'tdbodygame');
 		break;
 		
 		case 2 :
-			var url = 'gestion/page.php?category=2&'+url2+'&type=cases_monsters';
+			url = 'gestion/page.php?category=2&'+url2+'&type=cases_monsters';
 			HTTPTargetCall(url,'tdbodygame');
-			var url = "gestion/page.php?category=2&action=add&type=choose_monster&idmap="+idmap;
+			url = "gestion/page.php?category=2&action=add&type=choose_monster&idmap="+idmap;
 			HTTPPostCall(url,'form_monster','add_or_modif');
 		break;
 		
 		default :
-			var url = 'gestion/page.php?category=2&'+url2+'&type=cases_bloquees';
+			url = 'gestion/page.php?category=2&'+url2+'&type=cases_bloquees';
 			HTTPTargetCall(url,'tdbodygame');
 		break;
 	}
 	
 
 	
-	document.getElementById('monster_to_add').innerHTML = id_mstr;
+	$('#monster_to_add').html(id_mstr);
 }
 
 function changeGestionType(idmap,type)
 {
+        var url = '';
 	switch(type)
 	{
 		case 1 :
@@ -143,13 +143,13 @@ function changeGestionType(idmap,type)
 		
 		case 2 :
 			refreshMapEdition(idmap,'cases_monsters');
-			var url = "gestion/page.php?category=2&action=add&type=choose_monster&idmap="+idmap;
+			url = "gestion/page.php?category=2&action=add&type=choose_monster&idmap="+idmap;
 			HTTPPostCall(url,'form_monster','add_or_modif');
 		break;
 		
 		case 3 :
 			refreshMapEdition(idmap,'ressources');
-			var url = "gestion/page.php?category=2&action=add&type=choose_ressource&idmap="+idmap;
+			url = "gestion/page.php?category=2&action=add&type=choose_ressource&idmap="+idmap;
 			HTTPPostCall(url,'form_monster','add_or_modif');
 		break;
 		
@@ -161,32 +161,30 @@ function changeGestionType(idmap,type)
 
 function selectMonsterToAdd()
 {
-	if(document.getElementById('monster_to_select'))
-	{
-		var id_mstr = document.getElementById('monster_to_select').value;
-		if(id_mstr >= 1)
-		{
-			document.getElementById('monster_to_add').innerHTML = id_mstr
-		}else{
-			alert('veuillez sélectionner le monstre à ajouter');
-		}
-	}
+	
+    var id_mstr = $('#monster_to_select').val();
+    if(id_mstr >= 1)
+    {
+            $('#monster_to_add').html(id_mstr); 
+    }else{
+            alert('veuillez sélectionner le monstre à ajouter');
+    }
+	
 }
 
 function addMonsterOnMap(idmap,abs,ord)
 {
-	if(document.getElementById('monster_to_add'))
-	{
-		var id_mstr = document.getElementById('monster_to_add').innerHTML;
-		if(id_mstr >= 1)
-		{
-			var url = "gestion/page.php?category=2&action=add&type=valid_add_monster&idmap="+idmap+"&abs="+abs+"&ord="+ord+"&idmstr="+id_mstr;
-			HTTPTargetCall(url,'maj','',false);	
-			refreshMapEdition(idmap,'cases_monsters');
-		}else{
-			alert('veuillez sélectionner le monstre à ajouter');
-		}
-	}
+
+    var id_mstr = $('#monster_to_add').html();
+    if(id_mstr >= 1)
+    {
+            var url = "gestion/page.php?category=2&action=add&type=valid_add_monster&idmap="+idmap+"&abs="+abs+"&ord="+ord+"&idmstr="+id_mstr;
+            HTTPTargetCall(url,'maj','',false);	
+            refreshMapEdition(idmap,'cases_monsters');
+    }else{
+            alert('veuillez sélectionner le monstre à ajouter');
+    }
+	
 }
 
 function delMonsterOnMap(idmap,abs,ord)
@@ -201,32 +199,30 @@ function delMonsterOnMap(idmap,abs,ord)
 
 function selectRessourceToAdd()
 {
-	if(document.getElementById('ressource_to_select'))
-	{
-		var id_mstr = document.getElementById('ressource_to_select').value;
-		if(id_mstr >= 1)
-		{
-			document.getElementById('ressource_to_add').innerHTML = id_mstr
-		}else{
-			alert('veuillez sélectionner le monstre à ajouter');
-		}
-	}
+	
+    var id_mstr = $('#ressource_to_select').val();
+    if(id_mstr >= 1)
+    {
+            $('#ressource_to_add').html(id_mstr); 
+    }else{
+            alert('veuillez sélectionner le monstre à ajouter');
+    }
+	
 }
 
 function addRessourceOnMap(idmap,abs,ord)
 {
-	if(document.getElementById('ressource_to_add'))
-	{
-		var action_id = document.getElementById('ressource_to_add').innerHTML;
-		if(action_id >= 1)
-		{
-			var url = "gestion/page.php?category=2&action=add&type=valid_add_ressource&idmap="+idmap+"&abs="+abs+"&ord="+ord+"&action_id="+action_id;
-			HTTPTargetCall(url,'maj','',false);	
-			refreshMapEdition(idmap,'ressources');
-		}else{
-			alert('veuillez sélectionner la ressource à ajouter');
-		}
-	}
+
+        var action_id = $('#ressource_to_add').html();
+        if(action_id >= 1)
+        {
+                var url = "gestion/page.php?category=2&action=add&type=valid_add_ressource&idmap="+idmap+"&abs="+abs+"&ord="+ord+"&action_id="+action_id;
+                HTTPTargetCall(url,'maj','',false);	
+                refreshMapEdition(idmap,'ressources');
+        }else{
+                alert('veuillez sélectionner la ressource à ajouter');
+        }
+	
 }
 
 function delRessourceOnMap(idmap,abs,ord)
@@ -277,26 +273,26 @@ function cleanTextPnjAfter(div)
 
 function putAllPnjRow()
 {
-	var pnjName = document.getElementById('rowDefaultPnjName').value;	
+	var pnjName = $('#rowDefaultPnjName').val();	
 	var elements = document.getElementsByName('step');
 	for(var i=0; i<elements.length; i++)
 	{
 		var stepid = elements[i].value;
 		var inputId = 'pnj_'+stepid
-		var input = document.getElementById(inputId);	
+		var input = $('#'+inputId);	
 		input.value = pnjName;
 	}
 }
 
 function putAllLvlReqRow()
 {
-	var pnjName = document.getElementById('rowDefaultLvlReqName').value;	
+	var pnjName = $('#rowDefaultLvlReqName').val();	
 	var elements = document.getElementsByName('step');
 	for(var i=0; i<elements.length; i++)
 	{
 		var stepid = elements[i].value;
 		var inputId = 'lvlreq_'+stepid
-		var input = document.getElementById(inputId);	
+		var input = $('#'+inputId);	
 		input.value = pnjName;
 	}
 }

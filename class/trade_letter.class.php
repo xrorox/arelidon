@@ -98,7 +98,7 @@ class trade_letter {
 
 
             // Envoyer un message au destinataire pour lui pr�venir qu'un colis est arriv�
-            message::addNewMessage(0, $seller->getId(), "[Alerte] votre colis a �t� refus�", "Vous pouvez d�s maintenant retirer votre colis � un bureau de la Pigeon Post");
+            message::addNewMessage(0, $seller->getId(), "[Alerte] votre colis a ?t? refus?", "Vous pouvez d�s maintenant retirer votre colis � un bureau de la Pigeon Post");
         } else {
             $this->delete();
         }

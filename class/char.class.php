@@ -628,7 +628,7 @@ class char {
         $char = unserialize($_SESSION['char']);
         if ($char != null) {
             $newTime = $_SERVER['REQUEST_TIME'] - 300;
-            $SQL = "UPDATE `char` SET `time_connexion`=$newTime WHERE `idaccount`=" . $char->getIdAccount() . " AND id !=" . $char->getId;
+            $SQL = "UPDATE `char` SET `time_connexion`=$newTime WHERE `idaccount`=" . $char->getIdAccount() . " AND id !=" . $char->getId();
             loadSqlExecute($SQL);
         }
     }
@@ -742,7 +742,7 @@ class char {
     }
 
     function get($type) {
-        $sql = "SELECT " . $type . " FROM char WHERE `id` = '" . $this->getId . "' LIMIT 0, 1 ";
+        $sql = "SELECT " . $type . " FROM char WHERE `id` = '" . $this->getId() . "' LIMIT 0, 1 ";
         $result = loadSqlResultArray($sql);
 
         return $result[$type];
@@ -1196,8 +1196,8 @@ class char {
 
     public function ArrowUpArrowDown() {
 
-        $onclick = "HTTPTargetCall('pageig/guild/upgrade.php?id=" . $this->GetId() . "&rank=" . $this->getGuildRank() . "','upgrade');";
-        $onclick2 = "HTTPTargetCall('pageig/guild/downgrade.php?id=" . $this->GetId() . "&rank=" . $this->getGuildRank() . "','downgrade');";
+        $onclick = "HTTPTargetCall('pageig/guild/upgrade.php?id=" . $this->getId() . "&rank=" . $this->getGuildRank() . "','upgrade');";
+        $onclick2 = "HTTPTargetCall('pageig/guild/downgrade.php?id=" . $this->getId() . "&rank=" . $this->getGuildRank() . "','downgrade');";
 
         $up = '<div id="upgrade" <img src="pictures/iconesbonus/arrow_up_green.png" onclick=' . $onclick . ' alt="Ca marche pas!!!"/></div>';
         $down = '<div id="downgrade"><img src="pictures/iconesbonus/arrow_down_green.png" onclick=' . $onclick2 . ' alt="Ca marche pas"/></div>';
