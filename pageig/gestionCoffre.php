@@ -5,7 +5,8 @@
  * Gestion des coffres
  */
  
- 
+require_once($server.'class/box.class.php');
+require_once($server.'class/char_inv.class.php');
  echo '<div style="margin-top:10px;text-align:center;margin-bottom:5px;">';
  	echo '<img src="pictures/coffre.gif" style="width:160px;height:130px;" />';
  echo '</div>';
@@ -18,7 +19,8 @@
  
  // switch permettant la gestion des actions sur le coffre
  
- $action = $_GET['action'];
+ $action = (!empty($_GET['action']))? $_GET['action']: null;
+
  switch($action)
  {
  	case 'open':

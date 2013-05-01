@@ -73,9 +73,10 @@ class box {
     }
 
     function loadBox($id) {
+    
         $sql = "SELECT * FROM tresor WHERE id = " . $id;
         $result = loadSqlResultArray($sql);
-
+       
         if (count($result) > 0) {
             foreach ($result as $key => $value) {
                 $this->$key = $value;
@@ -114,6 +115,7 @@ class box {
     function isOpenned($idchar) {
         $sql = "SELECT COUNT(*) as open FROM tresor_open WHERE idchar = " . $idchar . " AND idtresor = " . $this->id;
         $result = loadSqlResultArray($sql);
+        
 
         if ($result['open'] == 0) {
             $this->isOpenned = 0;
@@ -127,9 +129,9 @@ class box {
     function verifDistance($idchar) {
         $verifchar = new char($idchar);
 
-        if ($verifchar->map == $this->map) {
-            $a = $this->abs - $verifchar->abs; // �cart horizontale
-            $b = $this->ord - $verifchar->ord; // �cart verticale
+        if ($verifchar->getMap() == $this->map) {
+            $a = $this->abs - $verifchar->getAbs(); // �cart horizontale
+            $b = $this->ord - $verifchar->getOrd(); // �cart verticale
 
             if (abs($a) <= 1 && abs($b) <= 1) {
                 $distance = 1;
@@ -164,10 +166,13 @@ class box {
 
     function charGetKey($char_id) {
         $key = new item($this->getCle());
+        
+        $char_inv = new char_inv($char_id);
 
-        if ($key->charGetItem($char_id) or $this->getCle() == 0) {
-            // On supprimer la clef utilis�e si besoin
-            $key->addItemToChar($char_id, -1);
+        if ($char_inv->getNumberItem($key) >= 1 or $this->getCle() == 0) {
+            
+            // On supprimer la clef utilis?e si besoin
+            $char_inv->manageItem($key, -1);
             return true;
         } else {
             return false;
@@ -182,9 +187,11 @@ class box {
             if ($distance == 1) {
                 // Si pas besoin de clef ou clef poss�d�e
                 if ($this->charGetKey($char_id)) {
+                    
+                    $char_inv = new char_inv($char_id);
                     // Ouverture du coffre
                     $item = new item($this->objet);
-                    $item->addItemToChar($char_id, $this->nbobjet);
+                    $char_inv->manageItem($item, $this->nbobjet);
                     $this->saveOpen($char_id);
 
                     // Affichage de ce que l'on a ramasser'
@@ -193,11 +200,11 @@ class box {
 
                     if ($this->objet != 0) {
                         echo '<div style="float:left;">';
-                        echo '<img src="pictures/item/' . $item->item . '.gif" alt="objet jeu de r�le" />';
+                        echo '<img src="pictures/item/' . $item->getId() . '.gif" alt="objet jeu de r�le" />';
                         echo '</div>';
 
                         echo '<div style="margin-left:5px;float:left;">';
-                        echo ' x' . $this->nbobjet . ' ' . $item->name;
+                        echo ' x' . $this->nbobjet . ' ' . $item->getName();
                         echo '</div>';
                     }
 

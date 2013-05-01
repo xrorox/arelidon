@@ -43,24 +43,23 @@ $char->saveMove();
 $map = new Map();
 $map->setId($char->getMap());
 
-if ($_SESSION['map'] !== $char->getMap()) {
+
+
+if(!isset($_SESSION['map'])){
+    
+}elseif($_SESSION['map'] !== $char->getMap()){
     $_SESSION['map'] = $char->getMap();
     $_SESSION['respawn'] = 5;
-} elseif (!isset($_SESSION['map']))
-    $_SESSION['map'] = 0;
+}
 
-
-
-if ($_SESSION['respawn'] == 5) {
-    $map->updateMonstersToRespawn();
+if(!isset($_SESSION['respawn'])){
     $_SESSION['respawn'] = 0;
-} elseif (isset($_SESSION['respawn']))
+}elseif($_SESSION['respawn'] == 5){
+   $map->updateMonstersToRespawn();
+    $_SESSION['respawn'] = 0; 
+}else{
     $_SESSION['respawn']++;
-
-else
-    $_SESSION['respawn'] = 0;
-
-
+}
 
 $arrayCase = $map->getArrayCase($char);
 
@@ -161,13 +160,13 @@ while ($ord < 16) {
                             }
 
 
-
-                            if ($arrayCase[$ord][$abs]['opened'] == $char->getId()) {
+                          
+                            if ($arrayCase[$ord][$abs]['opened'] == true) {
                                 $picture = "pictures/coffre/" . $arrayCase[$ord][$abs]['image'] . "_open.gif";
                             } else {
                                 $picture = "pictures/coffre/" . $arrayCase[$ord][$abs]['image'] . "_close.gif";
                             }
-                            echo '<div class="POM"><img  src="', $picture, '" alt="Tr�sors" onclick="loadObject(\'coffre\',\'', $distance, '\',\'', $case, '\');" /></div>';
+                            echo '<div class="POM"><img  src="', $picture, '" alt="Tr?sors" onclick="loadObject(\'coffre\',\'', $distance, '\',\'', $arrayCase[$ord][$abs]['id'], '\');" /></div>';
 
                             break;
 

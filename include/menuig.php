@@ -12,9 +12,9 @@ if (!empty($_GET['refresh'])) {
 $char = unserialize($_SESSION['char']);
 // r�cup�ration des variables
 if (!empty($_GET['refresh'])) {
-    $distance = $_GET['distance'];
-    $id = $_GET['id'];
-    $mode = $_GET['mode'];
+    $distance = (!empty($_GET['distance']))? $_GET['distance']: null;
+    $id = (!empty($_GET['id']))? $_GET['id']: null;
+    $mode = (!empty($_GET['mode']))? $_GET['mode']: null;
 
     if (!empty($_GET['pvp']))
         $pvp = true;
