@@ -31,8 +31,6 @@ if(isset($_GET['add']) && $_GET['add'] == 1)
 	
 	$message = $_POST['message'];
 	
-		
-	
 	$time = time();
 	
 	$canal = $tchat->getCharParameter($char->getId());
@@ -42,13 +40,9 @@ if(isset($_GET['add']) && $_GET['add'] == 1)
 	elseif($canal == 4)
 		$id_canal = group::getGroup($char->getId());
 	
-	// Si le boulet essaye d'�crire dans le canal guilde alors qu'il n'a pas de guilde
 	if($canal == 2 && $id_canal == 0)
 		$canal = 0;
 		
-			
-		
-	// Si le boulet essaye d'�crire dans le canal groupe alors qu'il n'a pas de groupe
 	if($canal == 4 && ($id_canal == 0 or $id_canal == ''))
 		$canal = 0;
 	

@@ -60,6 +60,3 @@ $width=200;
  	$tchat->printMessagesList($array_smiley);
  	
  echo '</div>';
- 
-
-?>

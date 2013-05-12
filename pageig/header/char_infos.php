@@ -8,23 +8,26 @@ require_once($server.'require.php');
 
 	$char=unserialize($_SESSION['char']);
 ?>
-<div id="infoContainer" class="center marginTop0 ">
+<div id="infoContainer" style="text-align: center; margin-top: 0px;" >
     <div id="charInfoContainer">	
-        <div class="marginTop10 height25 marginLeft0">
-            <div class="left width50P center marginTop5">
+        <div style="margin-top: 10px;height: 25px; margin-left: 0px;">
+            <div style="float: left; width: 50px; margin-top: 5px;">
+                
+             <?php   echo ' <b>'.$char->getPa();?>
                 <?php getPAPict(); ?>
-             <?php   echo ' <b>'.$char->getFatigue();?>
             </b></div>	
-            <div class="left width50P center marginTop5">
-                <?php	getPPPict();
-                echo ' <b>'.$char->getPp(); ?>
+            <div style="float: left; width: 50px; margin-top: 5px;">
+                <?php	
+                echo ' <b>'.$char->getPp();
+                getPPPict(); ?>
             </b></div>
+            <div style="float: left; width: 30px;margin-top: 5px;font-weight: 700;">
+                <?php	echo ' <b>'.$char->getGold();
+                    echo ' </b>';
+                    getGoldPict();?>
+            </div>
         </div>			
-        <div class="marginTop0 fontW700">
-            <?php	echo ' <b>'.$char->getGold();
-                echo ' </b>';
-                getGoldPict();?>
-        </div>
+        
 		
     </div>
     <?php

@@ -18,7 +18,7 @@ $saved_char = $char;
 require_once($server.'class/message.class.php');
 ?>
 
-<div style="height:100px;">;
+<div style="height:100px;">&nbsp;
 
 		<div id="info-title-container" style="float:left;width:226px;">
 			<div id="infoTitle">
@@ -57,7 +57,7 @@ require_once($server.'class/message.class.php');
 	<div id="tchatcontainerbody" style="height:100px;margin-top:-15px">
 		<div id="tchatcontainer">
 		<div id="waiter_tchat"></div>
-			<?php require_once($server.'tchat/tchatcontainer.php'); ?>
+			<?php require_once($server.'tchat/tchatcontainer.php') ?>
 		</div>
 	</div>
 </div>
